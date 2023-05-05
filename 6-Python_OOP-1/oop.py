@@ -148,64 +148,80 @@ print(personel_1.name)
 
 # Getter and Setter Methods
 
+# class Enemy: 
+#     name = 'Rusulir'
+#     surname = 'Dragonblade'
+
+#     # Underscore ile başlayan değişkenlerin instance tarafında çağrılmaması/değiştirilmemesi beklenir.
+#     # Piyasa standartıdır. Çağrılabilir.
+#     _team = 'Dwarves'
+
+#     # Double-Underscore ile başlayan değişkenlerin dışardan çağrılmasını engeller.
+#     __location = 'Khirerin Dynasty'
+
+#     def get_location(self): # Getter Method
+#         return self.__location
+
+#     def set_location(self, new_value): # Setter Method
+#         self.__location = new_value
+
+
+# enemy_troopy = Enemy()
+# print(enemy_troopy.get_location())
+# enemy_troopy.set_location('Acreabet Kingdom')
+# print(enemy_troopy.get_location())
+
+# print('##################')
+
+# #############################################
+# # enemy_lead = Enemy()
+# # print(enemy_lead.name)
+# # enemy_lead._team = 'Dragons'
+# # print(enemy_lead._team)
+# # print(personel.__location) # Private attr'e erişim sağlanmaz.
+# # print(personel._Person__location) # Private attr'e ulaşmanın yolu.
+# #############################################
+
+
+# class SendMail:
+
+#     __is_sent = False
+
+#     def set_send(self): # Setter Method
+#         # Mail gonderme komutlari
+#         # Mail gonderildikten sonra gonderildi bilgisin true yap.
+#         self.__is_sent = True
+    
+#     def get_status(self): # Getter method
+#         # Mail gonderildi mi bilgisini ver.
+#         return self.__is_sent
+
+# mail = SendMail()
+# print('Mail Gonderildi mi?', mail.get_status())
+# mail.set_send()
+# print('Mail Gonderildi mi?', mail.get_status())
+
+# print('##################')
+
+#---------------------------------------------
+
+# Static Method:
+
 class Enemy: 
     name = 'Rusulir'
     surname = 'Dragonblade'
 
-    # Underscore ile başlayan değişkenlerin instance tarafında çağrılmaması/değiştirilmemesi beklenir.
-    # Piyasa standartıdır. Çağrılabilir.
-    _team = 'Dwarves'
 
-    # Double-Underscore ile başlayan değişkenlerin dışardan çağrılmasını engeller.
-    __location = 'Khirerin Dynasty'
+    @staticmethod
+    def test():
+        print('Hello')
 
-    def get_location(self): # Getter Method
-        return self.__location
+    @staticmethod
+    def hello(name, surname):
+        print('Hello ' + name + ' ' + surname)
 
-    def set_location(self, new_value): # Setter Method
-        self.__location = new_value
-
-
-enemy_troopy = Enemy()
-print(enemy_troopy.get_location())
-enemy_troopy.set_location('Acreabet Kingdom')
-print(enemy_troopy.get_location())
-
-print('##################')
-
-#############################################
-# enemy_lead = Enemy()
-# print(enemy_lead.name)
-# enemy_lead._team = 'Dragons'
-# print(enemy_lead._team)
-# print(personel.__location) # Private attr'e erişim sağlanmaz.
-# print(personel._Person__location) # Private attr'e ulaşmanın yolu.
-#############################################
-
-
-class SendMail:
-
-    __is_sent = False
-
-    def set_send(self): # Setter Method
-        # Mail gonderme komutlari
-        # Mail gonderildikten sonra gonderildi bilgisin true yap.
-        self.__is_sent = True
-    
-    def get_status(self): # Getter method
-        # Mail gonderildi mi bilgisini ver.
-        return self.__is_sent
-
-mail = SendMail()
-print('Mail Gonderildi mi?', mail.get_status())
-mail.set_send()
-print('Mail Gonderildi mi?', mail.get_status())
-
-print('##################')
-
-#---------------------------------------------
-
-
+enemy_one = Enemy()
+enemy_one.test()
 
 
 
