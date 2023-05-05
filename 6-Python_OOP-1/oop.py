@@ -93,3 +93,59 @@ print(personel_1.name)
 '''
 
 #---------------------------------------------
+
+# # Bir instance'daki ekleme/güncelleme diğer instance'ı ETKİLEMEZ.
+# class Person:
+#     name = 'Qadir'
+#     surname = 'Adamson'
+
+# personel_1 = Person()
+# personel_2 = Person()
+
+# # print(personel_1)
+# # print(personel_2)
+
+# # personel_1.name = 'Rafe'
+
+# # print(personel_1.name)
+# # print(personel_2.name)
+
+# personel_1.age = 40
+
+# print(personel_1.age)
+# print(personel_2.age)
+
+#---------------------------------------------
+
+# class Person:
+#     name = 'Qadir'
+#     surname = 'Adamson'
+
+# personal = Person # personal is not instance, it's class.
+# other_instance = personal() # -> Created new instance from new class that is assigned above.
+
+#---------------------------------------------
+
+class Person:
+    name = 'Qadir'
+    surname = 'Savran'
+
+    # this -> self 
+    def test(self):
+        # We use this instead of self.
+        # Self her zaman ilk arguman olmasi lazim.
+        # Instance'dan method cagirirken self parametresi yollamiyoruz.
+        print(self.name + ' ' + self.surname)
+
+personal = Person()
+
+personal.name = 'Bekir'
+personal.surname = 'Kasan'
+
+personal.test()
+
+
+
+
+
+
