@@ -203,14 +203,13 @@ print(personel_1.name)
 
 # print('##################')
 
-#---------------------------------------------
+# ---------------------------------------------
+# Static Method:
 
-# # Static Method:
+# class Person:
 
-# class Enemy: 
-#     name = 'Rusulir'
-#     surname = 'Dragonblade'
-
+#     name = 'Qadir'
+#     surname = 'Adamson'
 
 #     @staticmethod
 #     def test():
@@ -220,10 +219,46 @@ print(personel_1.name)
 #     def hello(name, surname):
 #         print('Hello ' + name + ' ' + surname)
 
-# enemy_one = Enemy()
-# enemy_one.test()
+# personel = Person()
+# personel.test()
+# personel.hello('Qadir', 'Adamson')
 
-#---------------------------------------------
+# ---------------------------------------------
+# Double-Underscore Methods: DunderMethods: __method__()
+# Python için özel anlam içeren methodlardır. İsimleri sabittir.
 
+# class Person:
+
+#     name = 'Qadir'
+#     surname = 'Adamson'
+
+#     # __str__ : Instance default return.
+#     def __str__(self):
+#        return 'Bu benim yazdığım classtan üretilmiş bir intance\'dır.'
+
+#     def ekrana_yaz(self):
+#         print(f'{self.name} {self.surname}')
+
+#     # Constructor Method:
+#     # Instance oluşturulduğunda otomatik çalışan method.
+#     def __init__(self):
+#         self.name = 'Rafe'
+#         self.surname = 'Stefano'
+
+
+
+# # print(Person)
+# personel = Person()
+# print(personel)
+# personel.ekrana_yaz()
+
+# ---------------------------------------------
+
+from module import Module
+
+print(dir(Module))
+instance = Module()
+print(instance)
+print(Module.__doc__)
 
 
