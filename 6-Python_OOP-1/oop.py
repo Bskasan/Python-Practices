@@ -126,23 +126,44 @@ print(personel_1.name)
 
 #---------------------------------------------
 
-class Person:
-    name = 'Qadir'
-    surname = 'Savran'
+# class Person:
+#     name = 'Qadir'
+#     surname = 'Savran'
 
-    # this -> self 
-    def test(self):
-        # We use this instead of self.
-        # Self her zaman ilk arguman olmasi lazim.
-        # Instance'dan method cagirirken self parametresi yollamiyoruz.
-        print(self.name + ' ' + self.surname)
+#     # this -> self 
+#     def test(self):
+#         # We use this instead of self.
+#         # Self her zaman ilk arguman olmasi lazim.
+#         # Instance'dan method cagirirken self parametresi yollamiyoruz.
+#         print(self.name + ' ' + self.surname)
 
-personal = Person()
+# personal = Person()
 
-personal.name = 'Bekir'
-personal.surname = 'Kasan'
+# personal.name = 'Bekir'
+# personal.surname = 'Kasan'
 
-personal.test()
+# personal.test() # Person.test(personal) - Working like this in the background.
+
+#---------------------------------------------
+
+# Getter and Setter Methods
+
+class Enemy: 
+    name = 'Rusulir'
+    surname = 'Dragonblade'
+
+    # Underscore ile başlayan değişkenlerin instance tarafında çağrılmaması/değiştirilmemesi beklenir.
+    # Piyasa standartıdır. Çağrılabilir.
+    _team = 'Dwarves'
+
+    # Double-Underscore ile başlayan değişkenlerin dışardan çağrılmasını engeller.
+    __location = 'Under the mountains'
+
+enemy_lead = Enemy()
+print(enemy_lead.name)
+enemy_lead._team = 'Dragons'
+print(enemy_lead._team)
+# print(enemy_lead.__location)
 
 
 
