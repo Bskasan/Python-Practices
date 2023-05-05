@@ -171,6 +171,8 @@ print(enemy_troopy.get_location())
 enemy_troopy.set_location('Acreabet Kingdom')
 print(enemy_troopy.get_location())
 
+print('##################')
+
 #############################################
 # enemy_lead = Enemy()
 # print(enemy_lead.name)
@@ -179,6 +181,29 @@ print(enemy_troopy.get_location())
 # print(personel.__location) # Private attr'e erişim sağlanmaz.
 # print(personel._Person__location) # Private attr'e ulaşmanın yolu.
 #############################################
+
+
+class SendMail:
+
+    __is_sent = False
+
+    def set_send(self): # Setter Method
+        # Mail gonderme komutlari
+        # Mail gonderildikten sonra gonderildi bilgisin true yap.
+        self.__is_sent = True
+    
+    def get_status(self): # Getter method
+        # Mail gonderildi mi bilgisini ver.
+        return self.__is_sent
+
+mail = SendMail()
+print('Mail Gonderildi mi?', mail.get_status())
+mail.set_send()
+print('Mail Gonderildi mi?', mail.get_status())
+
+print('##################')
+
+#---------------------------------------------
 
 
 
