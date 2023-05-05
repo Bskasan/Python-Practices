@@ -157,13 +157,28 @@ class Enemy:
     _team = 'Dwarves'
 
     # Double-Underscore ile başlayan değişkenlerin dışardan çağrılmasını engeller.
-    __location = 'Under the mountains'
+    __location = 'Khirerin Dynasty'
 
-enemy_lead = Enemy()
-print(enemy_lead.name)
-enemy_lead._team = 'Dragons'
-print(enemy_lead._team)
-# print(enemy_lead.__location)
+    def get_location(self): # Getter Method
+        return self.__location
+
+    def set_location(self, new_value): # Setter Method
+        self.__location = new_value
+
+
+enemy_troopy = Enemy()
+print(enemy_troopy.get_location())
+enemy_troopy.set_location('Acreabet Kingdom')
+print(enemy_troopy.get_location())
+
+#############################################
+# enemy_lead = Enemy()
+# print(enemy_lead.name)
+# enemy_lead._team = 'Dragons'
+# print(enemy_lead._team)
+# print(personel.__location) # Private attr'e erişim sağlanmaz.
+# print(personel._Person__location) # Private attr'e ulaşmanın yolu.
+#############################################
 
 
 
