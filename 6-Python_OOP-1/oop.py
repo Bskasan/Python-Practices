@@ -40,18 +40,56 @@ class ClassName:
 
 #---------------------------------------------
 
-class Person:
-    name = 'Bekir'
-    surname = 'Adamson'
+# class Person:
+#     name = 'Bekir'
+#     surname = 'Adamson'
 
-# print(Person)
+# # print(Person)
+# # print(Person.name)
+# # print(Person.surname)
+
+# #---------------------------------------------
+# # Set Object from Class:
+
+# personel = Person() # -> Instance : Object created by using Class named Person.
+
+# print(personel)
+# print(personel.name)
+
+# print('--------------------------')
+
+# personel.name = 'Qadir'
+# personel.surname = 'Stefano'
+# personel.age = 40
+
+# print(personel.name)
+# print(personel.surname)
+# print(personel.age)
+
+# print('--------------------------')
+
+# # We don't want to change the original class. That's why we use OOP Concepts.
 # print(Person.name)
-# print(Person.surname)
+# # print(Person.age) -> Change we made in Instances don't affect the original class. 
 
 #---------------------------------------------
-# Set Object from Class:
 
-personel = Person() # -> Instance : Object created by using Class named Person.
+'''
 
-print(personel)
-print(personel.name)
+# Class'da yapilan degisiklikler Instance i etkilerler.
+
+class Person:
+    name = 'Qadir'
+    surname = 'Adamson'
+
+personel_1 = Person()
+
+print(personel_1.name)
+
+Person.name = 'Rafe'
+
+print(personel_1.name)
+
+'''
+
+#---------------------------------------------
