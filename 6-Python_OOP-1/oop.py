@@ -205,24 +205,25 @@ print(personel_1.name)
 
 #---------------------------------------------
 
-# Static Method:
+# # Static Method:
 
-class Enemy: 
-    name = 'Rusulir'
-    surname = 'Dragonblade'
+# class Enemy: 
+#     name = 'Rusulir'
+#     surname = 'Dragonblade'
 
 
-    @staticmethod
-    def test():
-        print('Hello')
+#     @staticmethod
+#     def test():
+#         print('Hello')
 
-    @staticmethod
-    def hello(name, surname):
-        print('Hello ' + name + ' ' + surname)
+#     @staticmethod
+#     def hello(name, surname):
+#         print('Hello ' + name + ' ' + surname)
 
-enemy_one = Enemy()
-enemy_one.test()
+# enemy_one = Enemy()
+# enemy_one.test()
 
+#---------------------------------------------
 
 
 
