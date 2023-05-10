@@ -52,7 +52,7 @@ class Department:
 #! Inheritance (Inherited from another class called Person.)
 #! JS -> class Employee extends Person
 #! Person classının tüm özellikleri Employee classına aktarıldı.
-class Employee(Person):
+class Employee(Person, Department):
 
     salary = 5000
 
