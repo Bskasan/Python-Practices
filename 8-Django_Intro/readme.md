@@ -21,7 +21,7 @@ echo "alias pip='pip3'" >> ~/.zshrc
 
     $ # pip install module_name
     $ # pip uninstall module_name
-    $ pip list
+    $ pip list -> shows us all installed modules.
     $ pip freeze
 
     # Installation DJANGO:
