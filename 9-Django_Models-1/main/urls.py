@@ -31,5 +31,7 @@ urlpatterns = [
     #! path('url/path', view_func(), 'redirection_name'),
     path('', home),
     path('admin/', admin.site.urls),
-    path('fscohort/', include('fscohort.urls')),
+    
+    # if something related fscohort is called, use this path method.
+    path('fscohort/', include('fscohort.urls')), # fscohort.urls.py
 ]
