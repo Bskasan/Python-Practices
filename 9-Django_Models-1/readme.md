@@ -33,3 +33,10 @@ def home(request):
 - Created urls.py in our fscohot project.
 - Copy the same syntax from the urls.py in main
 
+# Migrate
+- $ python manage.py migrate
+= $ python manage.py createsuperuser
+
+# Inform Django about Changing
+- python manage.py makemigrations
+- python manage.py migrate -> write it again.
