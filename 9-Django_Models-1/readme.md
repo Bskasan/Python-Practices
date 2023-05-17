@@ -18,11 +18,18 @@ Models-1
 
 # Creating Sample For Runserver Page
 
-Import Httpresponse from Django.
+Import Httpresponse from Django. 
+--> We use http response to write on browser, and don't forget to add request as parameter.
 
 from django.http import HttpResponse
 
 def home(request):
+
     return HttpResponse('''
         Welcome to Home
     ''')
+
+# What we've done in this class
+- Created urls.py in our fscohot project.
+- Copy the same syntax from the urls.py in main
+
