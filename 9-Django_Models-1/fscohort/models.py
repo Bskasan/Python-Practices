@@ -13,3 +13,13 @@ class Student(models.Model):
     # image = models.ImageField()
     created = models.DateTimeField(auto_now_add=True) # Write the time automatically when signed up.
     updated = models.DateTimeField(auto_now=True) # Write the time automaticall when updated.
+
+    def __str__(self):
+        return f'{self.first_name} {self.last_name} # {self.number}'
+
+    class Meta: # Change Default Settings
+        # https://docs.djangoproject.com/en/4.2/ref/models/options/
+        verbose_name = 'Developer'
+        verbose_name_plural = "Developers"
+        ordering = ["number"] # use '-' for reverse the order 
+
