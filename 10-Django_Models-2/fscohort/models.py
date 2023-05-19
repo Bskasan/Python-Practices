@@ -7,9 +7,9 @@ class Student(models.Model):
     # https://docs.djangoproject.com/en/4.2/ref/models/fields/#field-types
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    email = models.EmailField()
-    number = models.IntegerField()
-    picture = models.ImageField(upload_to='images/', default='')
+    email = models.EmailField(default='none@gmail.com', null=True, blank=True)
+    number = models.IntegerField(default=0, null=True, blank=True)
+    picture = models.ImageField(upload_to='images/', default='', null=True, blank=True)
     is_active = models.BooleanField(default=True)
     # image = models.ImageField()
     created = models.DateTimeField(auto_now_add=True) # Write the time automatically when signed up.
