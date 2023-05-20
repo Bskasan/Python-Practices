@@ -9,7 +9,7 @@ class Account(models.Model):
     def __str__(self):
         return f'{self.username}'
     
-
+# OneToOneField():
 class Profile(models.Model):
     first_name = models.CharField(max_length=64)
     last_name = models.CharField(max_length=64)
@@ -28,3 +28,20 @@ on_delete properties:
     # DO_NOTHING -> if primary deleted, do nothing.
     # PROTECT -> if foreign is exist, can not delete primary.
 '''
+
+COUNTRIES = (
+    ('US', 'America'),
+    ('DE', 'Germany'),
+    ('TR', 'Turkey'),
+)
+
+# ManyToOne() == ForeingKey()
+class Address(models.Model):
+    name = models.CharField(max_length=64)
+    address = models.TextField()
+    country = models.CharField(max_length=2, choices=COUNTRIES)
+    phone = models.CharField(max_length=16)
+    account = models.ForeignKey(Account, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.account} - {self.name} - {self.country}'
