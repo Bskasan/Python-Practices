@@ -24,4 +24,15 @@ class Student(models.Model):
         verbose_name_plural = "Developers"
         ordering = ["number"] # use '-' for reverse the order 
 
+#--------------------- Django Shell -----------------------#
+class Customer(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    age = models.PositiveIntegerField(default=0, blank=True, null=True)
+
+    def __str__(self):
+        return f'{self.first_name} {self.last_name} = {self.age}'
+
+
+
 
