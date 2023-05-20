@@ -33,6 +33,8 @@ class Customer(models.Model):
     def __str__(self):
         return f'{self.first_name} {self.last_name} = {self.age}'
 
+    # QuerySets: (get, filter, exclude):
+    # https://docs.djangoproject.com/en/4.1/ref/models/querysets/#field-lookups
 
 
 
