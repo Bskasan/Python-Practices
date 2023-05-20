@@ -45,3 +45,19 @@ class Address(models.Model):
 
     def __str__(self):
         return f'{self.account} - {self.name} - {self.country}'
+    
+
+
+# ManyToMany():
+class Product(models.Model):
+    brand = models.CharField('Marka', max_length=64)
+    product = models.CharField(verbose_name='Product Name', max_length=64)
+    account = models.ManyToManyField(Account, verbose_name='Accounts') # Dont use: on_delete
+
+    def __str__(self):
+        return f'{self.brand} - {self.product}'
+
+
+    class Meta:
+        verbose_name = 'Products'
+        verbose_name_plural = 'Products'
