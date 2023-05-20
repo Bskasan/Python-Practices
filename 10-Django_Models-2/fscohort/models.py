@@ -25,10 +25,20 @@ class Student(models.Model):
         ordering = ["number"] # use '-' for reverse the order 
 
 #--------------------- Django Shell -----------------------#
+
+AGES = (
+    (10, 'Age = 10'),
+    (20, 'Age = 20'),
+    (30, 'Age = 30'),
+    (40, 'Age = 40'),
+    (50, 'Age = 50'),
+)
+
+
 class Customer(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    age = models.PositiveIntegerField(default=0, blank=True, null=True)
+    age = models.PositiveIntegerField(default=0, blank=True, null=True, choices=AGES)
 
     def __str__(self):
         return f'{self.first_name} {self.last_name} = {self.age}'
