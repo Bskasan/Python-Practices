@@ -6,3 +6,6 @@
 5 - Copy and paste your secret key without '' .
 
 # Don't forget to add your app to installed apps in main/settings.py
+
+# Download Django Rest Framework
+= pip install djangorestframework
