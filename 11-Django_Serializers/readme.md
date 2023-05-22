@@ -9,3 +9,6 @@
 
 # Download Django Rest Framework
 = pip install djangorestframework
+
+# Pattern
+Model ---> Serializer ---> View ---> Url
