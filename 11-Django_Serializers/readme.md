@@ -4,3 +4,5 @@
 3 - SELECT_KEY = config('SECRET_KEY')
 4 - Create .env file globally in your local doc
 5 - Copy and paste your secret key without '' .
+
+# Don't forget to add your app to installed apps in main/settings.py
