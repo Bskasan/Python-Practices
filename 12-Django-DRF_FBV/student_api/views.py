@@ -24,9 +24,25 @@ def home(request):
 # All records in the StudentSerializers
 from .models import Student
 from .serializers import StudentSerializer
+from rest_framework import status
 
 @api_view(['GET']) # Default : GET
 def student_list(request):
     students = Student.objects.all()
     serializer = StudentSerializer(students, many=True)
     return Response(serializer.data)
+
+# -------------------------------------------------------------------  
+# Adding new record - StudentSerializers
+# From JSON -> Object / Serializer
+
+@api_view(['POST'])
+def student_create(request):
+    serializer = StudentSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(
+            {
+                'message': 'Created Successfully'
+            }, status = status.HTTP_201_CREATED
+        )
