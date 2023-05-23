@@ -20,4 +20,13 @@ def home(request):
         * DELETE -> Kayıt silme işlemlerinde kullanılır. (ID'ye ihtiyaç duyar.)
 '''
 # -------------------------------------------------------------------       
-    
+
+# All records in the StudentSerializers
+from .models import Student
+from .serializers import StudentSerializer
+
+@api_view(['GET']) # Default : GET
+def student_list(request):
+    students = Student.objects.all()
+    serializer = StudentSerializer(students, many=True)
+    return Response(serializer.data)
