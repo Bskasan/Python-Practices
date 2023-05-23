@@ -36,6 +36,9 @@ def student_list(request):
 # Adding new record - StudentSerializers
 # From JSON -> Object / Serializer
 
+# HTTP Status Codes:
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
 @api_view(['POST'])
 def student_create(request):
     serializer = StudentSerializer(data=request.data)
@@ -45,4 +48,10 @@ def student_create(request):
             {
                 'message': 'Created Successfully'
             }, status = status.HTTP_201_CREATED
+            # Status code is important in the industry.
         )
+    else:
+        return Response({
+            "message": "Data not validated",
+            "data": serializer.data
+        }, status = status.HTTP_400_BAD_REQUEST)
