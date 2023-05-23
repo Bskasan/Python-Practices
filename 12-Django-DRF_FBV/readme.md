@@ -13,5 +13,8 @@
 # Pattern
 Model ---> Serializer ---> View ---> Url
 
+
+# -------------- DJANGO FUNCTION BASED VIEWS ----------------
+
 # Downloading modules from requirements.txt
 - pip install -r requirements.txt
