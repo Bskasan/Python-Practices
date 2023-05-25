@@ -42,3 +42,9 @@ class StudentDetailUpdateDelete(APIView):
             return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    # Delete one record
+    def delete(self, request, pk):
+        student = get_object_or_404(Student, id=pk)
+        student.delete()
+        return Response({"message" : "Deleted"}, status=status.HTTP_204_NO_CONTENT)
