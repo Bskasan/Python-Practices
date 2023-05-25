@@ -112,4 +112,42 @@ class StudentGenericListCreate(mixins.ListModelMixin, mixins.CreateModelMixin, G
     # New Record
     def post(self, request, *args, **kwargs):
         return self.create(self, request, *args, **kwargs)
+    
+
+# ----------------------------------------------------------------
+# ListCreateAPIView
+# RetrieveUpdateDestroyAPIView
+# https://www.django-rest-framework.org/api-guide/generic-views/#concrete-view-classes
+# ----------------------------------------------------------------
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+
+# Kayıt Listeleme ve Yeni Kayıt Ekleme:
+class StudentListCreateAPIView(ListCreateAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+# Tek kayıt görüntüle/güncelle/sil:
+class StudentRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+    # lookup_field = "id" # Default: "pk"
+
+# ----------------------------------------------------------------
+# ModelViewSet:
+# https://www.django-rest-framework.org/api-guide/viewsets/#modelviewset
+# ----------------------------------------------------------------
+from rest_framework.viewsets import ModelViewSet
+from rest_framework.decorators import action
+
+# Tüm İşlemler:
+class StudentMVS(ModelViewSet):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+    @action(methods=["GET"], detail=False)
+    def count(self, request):
+        return Response({
+            "count": Student.objects.count()
+        })
+
 
