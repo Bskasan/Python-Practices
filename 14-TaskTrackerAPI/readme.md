@@ -21,3 +21,10 @@
         (3, 'Low')
     )
 
+# ORDER WHEN WE WRITE OUR DJANGO CODE
+Model >>> Serializer >>> Views >>> Urls
+
+# ORDER WHEN WE RUN THE CODE
+Urls >>> Views >>> Serializer >>> Model
+
+
