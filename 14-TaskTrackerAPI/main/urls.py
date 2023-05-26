@@ -28,4 +28,9 @@ from todo.views import TodoView
 router = routers.DefaultRouter()
 router.register(TodoView)
 
+# Same thing like below.
+# urlpatterns += [
+#     path('', router.urls),
+# ]
+
 urlpatterns += router.urls
