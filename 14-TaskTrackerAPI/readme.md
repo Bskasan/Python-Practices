@@ -22,9 +22,14 @@
     )
 
 # ORDER WHEN WE WRITE OUR DJANGO CODE
+
 Model >>> Serializer >>> Views >>> Urls
 
 # ORDER WHEN WE RUN THE CODE
+
 Urls >>> Views >>> Serializer >>> Model
 
+# WHAT IS THE DIFFERENCE BETWEEN PATCH AND PUT HTTP REQUESTS ?
+
+https://www.geeksforgeeks.org/difference-between-put-and-patch-request/
 

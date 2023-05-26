@@ -5,7 +5,10 @@ class TodoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Todo
-        exclude = []
-        # fields = '__all__'
+        exclude = [
+            'created_date',
+            'updated_date',
+        ]
+        # fields = '__all__'
         # fields = []
         
