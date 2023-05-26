@@ -13,3 +13,11 @@
 9. echo SECRET_KEY=django-insecure-k+ls=urs+*6_gp@whg=lz_9%5i%xcpblw6qzaj_44+-f22c-xy > .env
 10. Make decouple config settings for SECRET_KEY
 
+# Industry Standart - That means do not touch this code.
+
+    PRIORITY = (
+        (1, 'High'),
+        (2, 'Medium'),
+        (3, 'Low')
+    )
+

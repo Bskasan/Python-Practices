@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 class Todo(models.Model):
 
-    # Industry Standart - That means do not touch this code.
     PRIORITY = (
         (1, 'High'),
         (2, 'Medium'),
