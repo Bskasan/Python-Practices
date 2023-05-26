@@ -5,6 +5,7 @@ class TodoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Todo
+        exclude = []
         # fields = '__all__'
         # fields = []
-        exclude = []
+        
