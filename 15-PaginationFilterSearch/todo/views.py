@@ -19,7 +19,7 @@ from .serializers import Todo, TodoSerializer
 # Create your views here.
 class TodoView(ModelViewSet):
 
-    queryset = Todo.objects.all()
+    queryset = Todo.objects.all().order_by('-id') # Default ordering
     serializer_class = TodoSerializer
     pagination_class = CustomPageNumberPagination # Local Pagination Setting.
 
