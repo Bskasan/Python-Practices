@@ -14,7 +14,7 @@ class TodoView(ModelViewSet):
 
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
-    pagination_class = CustomPageNumberPagination # Local Setting for Todo View.
+    pagination_class = CustomPageNumberPagination # Local Pagination Setting.
     
 
     # Alternative temporary method
