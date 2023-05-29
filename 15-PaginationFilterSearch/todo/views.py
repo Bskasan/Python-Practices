@@ -1,9 +1,10 @@
 from django.shortcuts import render
 
 from rest_framework.viewsets import ModelViewSet
-from rest_framework.pagination import PageNumberPagination
+# Alternative temporary method
+# from rest_framework.pagination import PageNumberPagination
 
-
+from .paginations import CustomPageNumberPagination
 
 from .serializers import Todo, TodoSerializer
 
@@ -13,7 +14,7 @@ class TodoView(ModelViewSet):
 
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
-    pagination_class = PageNumberPagination
+    pagination_class = CustomPageNumberPagination
     
 
     # Alternative temporary method
