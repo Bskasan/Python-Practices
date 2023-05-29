@@ -6,7 +6,8 @@ from rest_framework.viewsets import ModelViewSet
 
 from .paginations import (
     CustomPageNumberPagination,
-    CustomLimitOffsetPagination
+    CustomLimitOffsetPagination,
+    CustomCursorPagination
 )
 
 from .serializers import Todo, TodoSerializer
@@ -17,7 +18,7 @@ class TodoView(ModelViewSet):
 
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
-    pagination_class = CustomLimitOffsetPagination # Local Pagination Setting.
+    pagination_class = CustomCursorPagination # Local Pagination Setting.
     
 
     # Alternative temporary method
