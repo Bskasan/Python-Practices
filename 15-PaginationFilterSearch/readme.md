@@ -15,5 +15,9 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 100
 }
 
+# Install Django Filter
+- pip install django-filter
+
+
 
 
