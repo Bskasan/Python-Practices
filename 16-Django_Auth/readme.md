@@ -4,3 +4,6 @@
 - Okulda Hocalar ve Ogrenciler.
 - Super User & Normal User
 
+# Admin panel username & password
+adming
+1234 
