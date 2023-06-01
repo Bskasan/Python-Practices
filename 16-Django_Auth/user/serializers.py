@@ -45,4 +45,4 @@ class RegistrationSerializer(serializers.ModelSerializer):
         user.set_password(validated_data.get('password'))
         user.save()
 
-        return super().create(validated_data)
+        return user
