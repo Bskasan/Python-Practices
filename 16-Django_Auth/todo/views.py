@@ -12,6 +12,9 @@ from .paginations import (
 
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
+from rest_framework.authentication import BasicAuthentication
+from rest_framework.permissions import IsAuthenticated
+
 
 from .serializers import Todo, TodoSerializer
 
@@ -34,7 +37,10 @@ class TodoView(ModelViewSet):
     search_fields = ['title', 'description']
     # Ordering: Sıralama:
     ordering_fields = ['id', 'title'] # '__all__'
+    authentication_classes = [BasicAuthentication]
+    permission_classes = [IsAuthenticated]
 
+    
     
     # Alternative temporary method
     # PageNumberPagination.page_size = 25

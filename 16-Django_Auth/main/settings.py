@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     
     # Modules
     'rest_framework',
+    'rest_framework.authtoken',
     'django_filters',
+    
     # Apps;
     'todo',
 ]
@@ -143,4 +145,14 @@ REST_FRAMEWORK = {
     #   'rest_framework.filters.SearchFilter',
     #   'rest_framework.filters.OrderingFilter'
     # ]
+
+
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ],
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+    #     'rest_framework.authentication.BasicAuthentication',
+    #     'rest_framework.authentication.SessionAuthentication',
+    # ]
+    
 }
