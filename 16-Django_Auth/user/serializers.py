@@ -14,6 +14,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
         required = True,
         write_only = True, # Not going Front-end
         validators = [validate_password] # Djando validation itself
+        
     )
 
     password2 = serializers.CharField(
