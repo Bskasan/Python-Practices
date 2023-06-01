@@ -8,5 +8,5 @@
 adming
 1234 
 
-# Creating tokens for each user
+# Creating tokens for each user ( Admin Panel )
 https://www.django-rest-framework.org/api-guide/authentication/#generating-tokens
