@@ -15,3 +15,6 @@ adming
 https://www.django-rest-framework.org/api-guide/authentication/#generating-tokens
 
 # Use this code whenever you need registration ( REUSABLE-CODE )
+
+# How to connect our backend with React ( Front-End )
+https://www.youtube.com/watch?v=fBA-jaWab9k
