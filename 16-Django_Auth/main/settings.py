@@ -44,9 +44,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'django_filters',
-    
+
     # Apps;
     'todo',
+    'user',
 ]
 
 MIDDLEWARE = [

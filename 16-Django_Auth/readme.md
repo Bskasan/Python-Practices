@@ -7,3 +7,6 @@
 # Admin panel username & password
 adming
 1234 
+
+# Creating tokens for each user
+https://www.django-rest-framework.org/api-guide/authentication/#generating-tokens
