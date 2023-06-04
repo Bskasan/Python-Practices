@@ -3,5 +3,6 @@ from django.contrib.auth.models import User
 
 
 class UserSerializer(serializers.ModelSerializer):
-    model = User
-    exclude = []
+    class Meta:
+        model = User
+        exclude = []
