@@ -23,4 +23,5 @@ class Post(models.Model):
     
 
     def __str__(self):
-        return self.category + ' / ' + self.title
+        # return self.category + ' / ' + self.title
+        return f'{self.category} / {self.title}'
