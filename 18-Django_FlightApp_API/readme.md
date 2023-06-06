@@ -23,10 +23,30 @@
         - Live Product
         - Updates
 
-## Software Development Workflow
+## Software Development Workflow ( Under Project Manager Control )
     -> Project vision / Product Backlog / Sprint Planning / Spring Backlog 
     -> Sprint / Daily Scrum
     -> Deploy / Release / Test / Build / Code
+
+
+## Our Technology Stack
+    -> FRONT END DEVELOPMENT
+        - HTML 
+        - CSS
+        - Bootstrap
+        - SASS
+        - Javascript
+        - React
+    -> BACKEND DEVELOPMENT
+        - Python
+        - Django
+    -> DATABASES
+        - PostgreSQL
+    -> DEPLOY
+        - Heroku
+    -> TESTING
+        - Postman
+        
 
 
 
