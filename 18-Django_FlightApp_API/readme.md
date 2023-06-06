@@ -49,6 +49,6 @@
         
 # SQL Diagram
 
----HERE---
+<img src="https://github.com/Bskasan/Python-Practices/blob/main/18-Django_FlightApp_API/SQL_Diagram.png?raw=true" />
 
 
