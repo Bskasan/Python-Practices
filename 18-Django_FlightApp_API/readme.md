@@ -23,7 +23,10 @@
         - Live Product
         - Updates
 
-
+## Software Development Workflow
+    -> Project vision / Product Backlog / Sprint Planning / Spring Backlog 
+    -> Sprint / Daily Scrum
+    -> Deploy / Release / Test / Build / Code
 
 
 
