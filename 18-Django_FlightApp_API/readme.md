@@ -46,6 +46,7 @@
         - Heroku
     -> TESTING
         - Postman
+        - Swagger / Reduc
         
 # SQL Diagram
 
