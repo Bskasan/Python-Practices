@@ -41,3 +41,30 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# LOGGING
+LOGGING = { 
+    "version": 1, 
+    "disable_existing_loggers": True, 
+    "formatters": {
+        'verbose': { 
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}', 
+            'style': '{', 
+        },
+    }, 
+    "handlers": {
+        'file': { 
+            'class': 'logging.FileHandler', 
+            "formatter": "verbose", 
+            'filename': './debug.log', 
+            'level': 'WARNING', 
+        }, 
+    }, 
+    "loggers": { 
+        "django": { 
+            "handlers": ['file'],  
+            "level": config("DJANGO_LOG_LEVEL", "WARNING"), 
+            'propagate': True, 
+        }, 
+    }, 
+}
