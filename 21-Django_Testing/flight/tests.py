@@ -11,6 +11,7 @@ from rest_framework.authtoken.models import Token
 # Create your tests here.
 class FlightTestCase(APITestCase):
     
+    # Setup for user & database or what kind of data we need.
     def setUp(self):
         self.factory = APIRequestFactory()
         self.user = User.objects.create_user(
